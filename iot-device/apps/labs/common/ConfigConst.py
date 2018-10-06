@@ -67,24 +67,3 @@ POLL_CYCLES_KEY     = 'pollCycleSecs'
 
 
 
-
-
-
-# SMTP = 'smtp'
-# MQTT = 'mqtt'
-# 
-# SECTION_SEPARATOR = '.'
-# CLOUD = 'cloud'
-# 
-# 
-# 
-# 
-# SMTP_CLOUD_SECTION = SMTP + SECTION_SEPARATOR + CLOUD
-# MQTT_CLOUD_SECTION = MQTT + SECTION_SEPARATOR + CLOUD
-# 
-# HOST_KEY = 'smtp.mail.yahoo.com'
-# PORT_KEY = '465'
-# FROM_ADDRESS_KEY = 'xingli90@yahoo.com'
-# TO_ADDRESS_KEY = 'yuan.cha@husky.neu.edu'
-# USER_AUTH_TOKEN_KEY = 'connectdevices'
-
