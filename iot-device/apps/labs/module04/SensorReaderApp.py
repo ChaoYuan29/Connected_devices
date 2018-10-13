@@ -1,9 +1,8 @@
 '''
-Created on 2018年9月22日
+Created on Oct 13, 2018
 
 @author: andyyuan
 '''
-
 
 from time import sleep
 from labs.module03 import TempSensorAdaptor

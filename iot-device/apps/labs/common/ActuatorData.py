@@ -37,13 +37,13 @@ class ActuatorData():
         return self.name
     
     def getStateData(self):
-        return self.stateDatae
+        return self.stateData
     
     def getStatusCode(self):
-        return self.statusCodee 
+        return self.statusCode
     
     def getErrorCode(self):
-        return self.errorCode
+        return self.errCode
     
     def getValue(self):
         return self.val;
