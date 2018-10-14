@@ -5,17 +5,17 @@ Created on Oct 13, 2018
 '''
 
 from time import sleep
-from labs.module03 import TempSensorAdaptor
+from labs.module04 import I2CSenseHatAdaptor
 #from labs.module02 import SmtpClientConnector
 
 
-tempSensAdaptor = TempSensorAdaptor.TempSensorAdaptor()
+i2CSenseHatAdaptor = I2CSenseHatAdaptor.I2CSenseHatAdaptor()
 
-tempSensAdaptor.daemon = True
+i2CSenseHatAdaptor.daemon = True
 print('- - - - - - - - - - - - - - - - - - - - - - - - ')
 print("Starting system performance app daemon thread...")
-tempSensAdaptor.enableEmulator = True
-tempSensAdaptor.start()
+i2CSenseHatAdaptor.enableEmulator = True
+i2CSenseHatAdaptor.start()
 
 while (True):
     sleep(10)
