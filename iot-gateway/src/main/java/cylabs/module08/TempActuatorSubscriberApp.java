@@ -41,9 +41,13 @@ public class TempActuatorSubscriberApp {
 	{
 	_mqttClient = new MqttClientConnector("things.ubidots.com","A1E-cohoPVgrJYePKdP7FkjNMRWKSzQ4xC",null,"/Users/andyyuan/Desktop/ubidots.pem");
 	_mqttClient.connect();
-	String topicName = "/v1.6/devices/homeiotgateway/tempactuator";
+	String topicName1 = "/v1.6/devices/homeiotgateway/tempactuator";
+	String topicName2 = "/v1.6/devices/homeiotgateway/mintemp";
+	String topicName3 = "/v1.6/devices/homeiotgateway/maxtemp";
  // only for subscribing...
-	_mqttClient.subscribeToTopic(topicName,2); // you must implement this method yourself
+	_mqttClient.subscribeToTopic(topicName1,2); // you must implement this method yourself
+	_mqttClient.subscribeToTopic(topicName2,2);
+	_mqttClient.subscribeToTopic(topicName3,2);
 //	_mqttClient.subscribeToAll(); // this is implemented for you
 // // only for publishing...
 //	String payload = "This is a test...";

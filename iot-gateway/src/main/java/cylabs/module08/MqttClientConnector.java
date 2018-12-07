@@ -38,7 +38,7 @@ public class MqttClientConnector implements MqttCallback
     private MqttClient _mqttClient;
 	private String _pemFileName = "/Users/andyyuan/Desktop/ubidots.pem ";
 	private String _userName;
-	private String _authToken;
+//	private String _authToken;
 	private boolean _isSecureConn;
     // constructors
     /**
@@ -65,9 +65,9 @@ public class MqttClientConnector implements MqttCallback
 		if (userName != null && userName.trim().length() > 0) {
 		 _userName = userName;
 		}
-		if (authToken != null && authToken.trim().length() > 0) {
-		 _authToken = authToken;
-		}
+//		if (authToken != null && authToken.trim().length() > 0) {
+//		 _authToken = authToken;
+//		}
 		if (pemFileName != null) {
 			File file = new File(pemFileName);
 			
@@ -195,10 +195,10 @@ public boolean subscribeToTopic(String topic, int qosLevel){
 // TODO: you must implement this
 	try {
 		_mqttClient.subscribe(topic,qosLevel);
+		System.out.println("Topic" + topic);
 		return true;
 	}catch(MqttException e) {
-		System.out.println(e.toString());
-		System.out.println(e.getMessage());
+		_Logger.log(Level.WARNING, "Failed to subscribe to current topics.", e);
 	}
 	return false;
 	
@@ -243,5 +243,6 @@ public void messageArrived(String data, MqttMessage msg) throws Exception
 	{
  // TODO: should you analyze the message or just log it?
 	_Logger.info("Message arrived: " + data + ", " + msg.getId());
+	_Logger.info(msg.toString());
 		}
 	}

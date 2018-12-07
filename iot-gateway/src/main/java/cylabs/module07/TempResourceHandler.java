@@ -5,6 +5,8 @@ import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.coap.CoAP.ResponseCode;
 import org.eclipse.californium.core.server.resources.CoapExchange;
 
+import semester_project.MqttClientConnector;
+
 public class TempResourceHandler extends CoapResource{
 	
 	private static final Logger _Logger = 
@@ -29,6 +31,18 @@ public class TempResourceHandler extends CoapResource{
 	}
 	@Override
 	public void handlePOST(CoapExchange exch) {
+
+		System.out.println(exch.getRequestText());
+		
+		
+		//Start Mqtt clientCloud
+		MqttClientConnector _mqttClient = new MqttClientConnector("things.ubidots.com","A1E-cohoPVgrJYePKdP7FkjNMRWKSzQ4xC",null,"/Users/andyyuan/Desktop/ubidots.pem");
+		_mqttClient.connect();
+		String topicName = "/v1.6/devices/homeiotgateway/Tempsensor";
+		String payload = exch.getRequestText();
+		_mqttClient.publishMessage(topicName, 2, payload.getBytes());
+		_mqttClient.disconnect();
+		
 		exch.respond(ResponseCode.VALID, super.getName()+"response");
 		_Logger.info("Post request：" + exch.getRequestText());
 	}
