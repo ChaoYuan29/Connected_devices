@@ -46,7 +46,7 @@ public class TempSensorPublisherApp {
 //	_mqttClient.subscribeToTopic(topicName,2); // you must implement this method yourself
 //	_mqttClient.subscribeToAll(); // this is implemented for you
 // // only for publishing...
-	String payload = "10";
+	String payload = "5";
 // // only for publishing...
 	_mqttClient.publishMessage(topicName, 2, payload.getBytes());
 	_mqttClient.disconnect();

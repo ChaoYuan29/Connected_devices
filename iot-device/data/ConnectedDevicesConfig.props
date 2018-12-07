@@ -8,13 +8,13 @@ port = 1883
 
 
 [smtp.cloud]
-host = smtp.mail.yahoo.com
-port = 465
-fromAddr = a.yuan36@yahoo.com
+host = smtp.163.com
+port = 587
+fromAddr = A6178382877@163.com
 toAddr = yuan.cha@husky.neu.edu
 toMediaAddr = Not Set
 toTxtAddr = Not Set
-authToken = connecteddevices
+authToken = A123456
 enableAuth = True
 enableCrypt = True
 
@@ -76,3 +76,4 @@ enableLogging = True
 enableEmulator = True
 pollCycleSecs = 60
 nominalTemp = 20
+

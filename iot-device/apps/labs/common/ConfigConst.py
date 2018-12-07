@@ -4,6 +4,9 @@ Created on 2018年9月15日
 @author: andyyuan
 '''
 
+# import sys
+# sys.path.append('/home/pi/SemesterProject/apps')
+
 SECTION_SEPARATOR = '.'
 DEFAULT_CONFIG_FILE_NAME = '/Users/andyyuan/git/repository/iot-device/data/ConnectedDevicesConfig.props'
 

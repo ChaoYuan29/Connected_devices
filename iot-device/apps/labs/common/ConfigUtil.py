@@ -3,6 +3,8 @@ Created on 2018年9月15日
 
 @author: andyyuan
 '''
+# import sys
+# sys.path.append('/home/pi/SemesterProject/apps')
 
 import configparser
 import os
